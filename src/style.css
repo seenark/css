@@ -69,3 +69,9 @@
     color: white;
   }
 }
+
+.card:not(:has(img)) > h1 {
+  color: black;
+  font-size: 3rem;
+  padding: 4rem;
+}
