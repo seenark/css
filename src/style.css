@@ -1,77 +1,9 @@
-.card-container {
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+p {
+  font-size: 2rem;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.25rem;
-  gap: 0.15rem;
-  border-radius: 10px;
-}
-
-.card img {
-  width: 200px;
-  height: 200px;
-}
-
-@container style(--team: cfc) {
-  .card {
-    background: linear-gradient(
-      to right,
-      #034694,
-      #034694 50%,
-      #dba111 50%,
-      #dba111
-    );
-    color: white;
-  }
-}
-
-@container style(--team: mufc) {
-  .card {
-    background: linear-gradient(
-      to right,
-      #da291c,
-      #da291c 50%,
-      #fbe122 50%,
-      #fbe122
-    );
-    color: black;
-  }
-}
-
-@container style(--team: lad) {
-  .card {
-    background: linear-gradient(
-      to right,
-      #005a9c,
-      #005a9c99 50%,
-      #ef3e4299 50%,
-      #ef3e42
-    );
-    color: white;
-  }
-}
-
-@container style(--owner: todd) and style(--team: cfc) {
-  .card {
-    background: linear-gradient(
-      to right,
-      #034694,
-      #005a9c99 50%,
-      #ef3e4299 50%,
-      #dba111
-    );
-    color: white;
-  }
-}
-
-.card:not(:has(img)) > h1 {
-  color: black;
-  font-size: 3rem;
-  padding: 4rem;
+p:first-of-type::first-letter {
+  initial-letter: 4 3; /* line offset */
+  font-weight: bold;
+  margin-right: 1rem;
 }
