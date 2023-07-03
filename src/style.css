@@ -1,0 +1,8 @@
+h1,
+h2 {
+  font-size: 48px;
+  text-align: center;
+}
+h1 {
+  text-wrap: balance;
+}
