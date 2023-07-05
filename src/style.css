@@ -1,19 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 4rem;
+  padding: 2rem;
+}
+
+section {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+  grid-auto-columns: 300px;
+  border: 2px solid hotpink;
+  border-radius: 10px;
+  overflow-x: auto;
 }
 
 div {
-  background-color: #e9e9e9;
-  padding: 1rem;
-  box-shadow: 0 0 0.5rem hsl(0 0% 0% / 40%);
   border-radius: 10px;
-  width: 50vmax;
-  height: 50vmin;
-  transition: rotate 1s ease, scale 1s ease-in-out;
+  overflow: hidden;
 }
 
-div:hover {
-  rotate: 1turn;
-  scale: 1.5;
-  translate: 10px 10px;
+div img {
+  object-fit: cover;
+}
+
+section:has(div) {
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: normal;
+}
+
+section > div {
+  scroll-snap-align: start;
+  /* scroll-padding-left: 2rem; */
+  /* scroll-padding: 1rem 2rem 1rem 3rem; */
+  /* scroll-margin: 2rem; */
 }
