@@ -2,37 +2,16 @@
   box-sizing: border-box;
 }
 
-body {
-  padding: 2rem;
-}
-
-section {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 2rem;
-  grid-auto-columns: 300px;
-  border: 2px solid hotpink;
-  border-radius: 10px;
-  overflow-x: auto;
-}
-
 div {
-  border-radius: 10px;
-  overflow: hidden;
+  width: 100vw;
+  border: 1px solid hotpink;
+  text-align: center;
 }
 
-div img {
-  object-fit: cover;
-}
-
-section:has(div) {
-  scroll-snap-type: x mandatory;
-  scroll-snap-stop: normal;
-}
-
-section > div {
-  scroll-snap-align: start;
-  /* scroll-padding-left: 2rem; */
-  /* scroll-padding: 1rem 2rem 1rem 3rem; */
-  /* scroll-margin: 2rem; */
+h1 {
+  /* font-size: 2rem; */
+  /* font-size: 2vw; */
+  /* font-size: max(2vw, 30px); */
+  /* font-size: min(max(30px, 2vw), 42px); */
+  font-size: clamp(30px, 2vw, 42px);
 }
