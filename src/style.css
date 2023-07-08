@@ -2,23 +2,42 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 50px;
+}
+
+nav {
+  height: 50px;
+  background-color: blanchedalmond;
+  position: sticky;
+  top: 0;
+}
+
 section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 div {
   width: 960px;
 }
 
-/* fallback if browser doesn't support text-wrap:balance; */
 h1 {
-  font-size: min(max(12px, 2vw, 42px));
+  font-size: clamp(28px, 2vw, 42px);
+  margin: 0;
 }
 
-@supports (font-size: clamp(12px, 4rem, 42px)) {
-  h1 {
-    font-size: clamp(28px, 2vw, 42px);
-  }
+.section1 {
+  background-color: firebrick;
+  color: white;
+}
+
+.section2 {
+  background-color: blueviolet;
+  color: white;
+}
+
+.section3 {
+  background-color: greenyellow;
 }
