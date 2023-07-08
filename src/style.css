@@ -10,6 +10,7 @@ section {
   display: grid;
   grid-auto-flow: column;
   gap: 2rem;
+  grid-template-columns: 50px;
   grid-auto-columns: 300px;
   border: 2px solid hotpink;
   border-radius: 10px;
@@ -28,11 +29,20 @@ div img {
 section:has(div) {
   scroll-snap-type: x mandatory;
   scroll-snap-stop: normal;
+  scroll-padding-left: 50px;
 }
 
 section > div {
   scroll-snap-align: start;
-  /* scroll-padding-left: 2rem; */
-  /* scroll-padding: 1rem 2rem 1rem 3rem; */
-  /* scroll-margin: 2rem; */
+}
+
+section > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  background-color: blanchedalmond;
+  rotate: 180deg;
+  position: sticky;
+  left: 0;
 }
