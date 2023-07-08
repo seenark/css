@@ -1,29 +1,36 @@
-section {
-  display: inline-block;
-}
-div {
-  width: 100vw;
-  aspect-ratio: 2/3;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-div {
-  width: 200px;
-  height: 300px;
-  background-image: url("https://images.unsplash.com/photo-1570498839593-e565b39455fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80");
-  background-repeat: no-repeat;
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-div {
-  background-position: 70% 40%;
+tr:has(th) {
+  font-size: 1.5rem;
 }
 
-section > img {
-  /* x y width height */
-  /* object-view-box: xywh(580px 430px 200px 300px); */
+tr:hover {
+  background-color: #f5f5f5;
+}
 
-  /* top right bottom left */
-  object-view-box: inset(100px 100px 100px 100px);
+th {
+  background-color: #4caf50;
+  color: white;
+}
 
-  /* x width height y */
-  /* object-view-box: rect(100px 100px 100px 100px); */
+/* tr:nth-child(even) { */
+/*   background-color: hsla(36, 100%, 50%, 40%); */
+/* } */
+
+/* tr:nth-child(n of tr[data-type="pl"]) { */
+/*   background-color: hsla(200, 100%, 50%, 40%); */
+/* } */
+
+tr:nth-child(n of :not(tr[data-type="pl"])) {
+  background-color: hsla(0, 0%, 50%, 60%);
 }
