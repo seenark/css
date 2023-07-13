@@ -1,6 +1,13 @@
-img {
-  width: 500px;
-  /* aspect-ratio: 1 / 2; */
-  aspect-ratio: 0.5;
-  object-fit: cover;
+p {
+  padding: 1rem;
+}
+
+.div1 {
+  border: 1px solid blueviolet;
+  content-visibility: auto;
+}
+
+.div2 {
+  border: 1px solid hotpink;
+  display: none;
 }
