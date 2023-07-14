@@ -1,15 +1,20 @@
 div {
-  background-color: hsl(from red h s l);
-  background-color: rgb(from #1b7cbb r g b);
-
-  background-color: hsl(from #1b7cbb h s calc(l - 20%));
+  border: 1px hotpink solid;
+  height: 200px;
+}
+div:nth-child(1) {
+  overflow: auto;
 }
 
-div {
-  color: #1ed760;
-  background-color: var(--color);
+div:nth-child(2) {
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+div:nth-child(3) {
+  overflow: scroll;
+  scrollbar-gutter: stable both-edges;
 }
 
-div:hover {
-  background-color: hsl(from var(--color) h calc(s - 10%) l);
+p {
+  background-color: hsl(0 10% 80%);
 }
