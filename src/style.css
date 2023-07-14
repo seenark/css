@@ -1,17 +1,15 @@
-input[type="checkbox"] {
-  color: firebrick;
-  accent-color: firebrick;
+div {
+  background-color: hsl(from red h s l);
+  background-color: rgb(from #1b7cbb r g b);
+
+  background-color: hsl(from #1b7cbb h s calc(l - 20%));
 }
 
-input[type="range"] {
-  accent-color: hsl(30, 100%, 50%);
+div {
+  color: #1ed760;
+  background-color: var(--color);
 }
 
-input[type="radio"] {
-  accent-color: hsla(200, 100%, 50%, 0.8);
-}
-
-progress {
-  /* not yet supported */
-  accent-color: red;
+div:hover {
+  background-color: hsl(from var(--color) h calc(s - 10%) l);
 }
