@@ -1,13 +1,17 @@
-p {
-  padding: 1rem;
+input[type="checkbox"] {
+  color: firebrick;
+  accent-color: firebrick;
 }
 
-.div1 {
-  border: 1px solid blueviolet;
-  content-visibility: auto;
+input[type="range"] {
+  accent-color: hsl(30, 100%, 50%);
 }
 
-.div2 {
-  border: 1px solid hotpink;
-  display: none;
+input[type="radio"] {
+  accent-color: hsla(200, 100%, 50%, 0.8);
+}
+
+progress {
+  /* not yet supported */
+  accent-color: red;
 }
