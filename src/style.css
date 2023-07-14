@@ -1,20 +1,17 @@
-div {
-  border: 1px hotpink solid;
-  height: 200px;
-}
-div:nth-child(1) {
-  overflow: auto;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
 
-div:nth-child(2) {
-  overflow: auto;
-  scrollbar-gutter: stable;
-}
-div:nth-child(3) {
-  overflow: scroll;
-  scrollbar-gutter: stable both-edges;
+@font-palette-values --nabla {
+  font-family: "Nabla";
+  base-palette: 5;
+  override-colors: 0 hsl(0deg 0% 100%), 1 hsl(200deg 100% 50%),
+    2 hsl(200deg 100% 30%), 3 hsl(250deg 50% 50%), 4 hsl(255deg 30% 50%),
+    5 hsl(250deg 50% 40%), 6 hsl(200deg 80% 50%), 7 hsl(250deg 50% 50%),
+    8 hsl(210deg 50% 50%), 9 hsl(270deg 50% 90%), 10 hsl(300deg 50% 70%);
 }
 
 p {
-  background-color: hsl(0 10% 80%);
+  font-size: 12rem;
+  font-family: "Nabla";
+  color: hsl(50deg 80% 10%);
+  font-palette: --nabla;
 }
