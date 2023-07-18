@@ -9,5 +9,5 @@ p {
 
 .div2 {
   border: 1px solid hotpink;
-  display: none;
+  content-visibility: visible;
 }
